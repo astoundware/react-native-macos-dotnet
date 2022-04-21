@@ -27,3 +27,6 @@ xcuserdata/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,cocoapods
+
+# Output directory used by dotnet build scripts
+bin/
