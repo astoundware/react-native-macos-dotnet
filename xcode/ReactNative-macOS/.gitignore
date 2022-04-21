@@ -1,0 +1,2 @@
+# Output directory used by dotnet build scripts
+bin/
