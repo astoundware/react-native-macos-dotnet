@@ -54,6 +54,9 @@
   <ItemGroup>
     <None Include="Astound.ReactNative.macOS.Bindings.nuspec" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Astound.ReactNative.macOS.Bindings.targets" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.ObjcBinding.CSharp.targets" />
   <Target Condition="!Exists('..\..\xcode\ReactNative-macOS\bin\$(Configuration)\libReactNative-macOS.a')" Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec WorkingDirectory="$(SolutionDir)..\xcode" Command="xcodebuild -workspace ReactNative-macOS.xcworkspace -scheme ReactNative-macOS -configuration $(Configuration) ONLY_ACTIVE_ARCH=NO CONFIGURATION_BUILD_DIR=$(SolutionDir)..\xcode\bin\$(Configuration) build" />
