@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$id$</title>
+    <authors>Astound</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/astoundware/react-native-macos-dotnet</projectUrl>
+    <icon>images\astound.png</icon>
+    <description>$description$</description>
+    <copyright>$copyright$</copyright>
+    <tags>React macOS</tags>
+  </metadata>
+  <files>
+      <file src="..\..\images\astound.png" target="images\" />
+  </files>
+</package>

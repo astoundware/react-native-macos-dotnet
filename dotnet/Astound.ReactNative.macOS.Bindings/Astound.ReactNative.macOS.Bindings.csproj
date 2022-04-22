@@ -6,6 +6,11 @@
     <OutputType>Library</OutputType>
     <MacResourcePrefix>Resources</MacResourcePrefix>
     <RootNamespace>Astound.ReactNative.macOS.Bindings</RootNamespace>
+    <PackageId>Astound.ReactNative.macOS.Bindings</PackageId>
+    <Description>This bindings library enables you to create a React Native app for macOS.</Description>
+    <ReleaseVersion>0.64.30</ReleaseVersion>
+    <Version>0.64.30</Version>
+    <Copyright>Copyright © 2022 Astound</Copyright>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -45,6 +50,9 @@
       <ForceLoad>True</ForceLoad>
       <LinkerFlags>-lstdc++</LinkerFlags>
     </NativeReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Astound.ReactNative.macOS.Bindings.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.ObjcBinding.CSharp.targets" />
   <Target Condition="!Exists('..\..\xcode\ReactNative-macOS\bin\$(Configuration)\libReactNative-macOS.a')" Name="PreBuild" BeforeTargets="PreBuildEvent">
