@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package >
-  <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <title>$id$</title>
+  <metadata minClientVersion="2.5">
+    <id>Astound.ReactNative.macOS.Bindings</id>
+    <version>0.64.30</version>
+    <title>Astound.ReactNative.macOS.Bindings</title>
     <authors>Astound</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/astoundware/react-native-macos-dotnet</projectUrl>
     <icon>images\astound.png</icon>
-    <description>$description$</description>
-    <copyright>$copyright$</copyright>
+    <description>This bindings library enables you to create a React Native app for macOS.</description>
+    <copyright>Copyright © 2022 Astound</copyright>
     <tags>React macOS</tags>
     <dependencies>
       <group targetFramework="Xamarin.Mac2.0" />
@@ -18,8 +18,8 @@
   </metadata>
   <files>
       <file src="..\..\images\astound.png" target="images\" />
-      <file src="..\..\xcode\bin\Debug\libReactNative-macOS.a" target="lib\xamarinmac20\Debug"/>
-      <file src="..\..\xcode\bin\Release\libReactNative-macOS.a" target="lib\xamarinmac20\Release"/>
+      <file src="bin\Debug\Astound.ReactNative.macOS.Bindings.dll" target="reference\Debug" />
+      <file src="bin\Release\Astound.ReactNative.macOS.Bindings.dll" target="reference\Release" />
       <file src="Astound.ReactNative.macOS.Bindings.targets" target="build"/>
   </files>
 </package>

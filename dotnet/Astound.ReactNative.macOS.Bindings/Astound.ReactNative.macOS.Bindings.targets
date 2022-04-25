@@ -1,13 +1,13 @@
 ﻿
 <Project>
-    <ItemGroup Condition="'$(Cofiguration)'=='Release'">
-        <ObjcBindingNativeLibrary Include="$(MSBuildThisFileDirectory)..\lib\Release\libReactNative-macOS.a">
-          <Link>libReactNative-macOS.a</Link>
-        </ObjcBindingNativeLibrary>
+    <ItemGroup Condition="'$(Configuration)'=='Release'">
+        <Reference Include="Astound.ReactNative.macOS.Bindings">
+            <HintPath>$(MSBuildThisFileDirectory)..\reference\Release\Astound.ReactNative.macOS.Bindings.dll</HintPath>
+        </Reference>
     </ItemGroup>
-    <ItemGroup Condition="'$(Cofiguration)'!='Release'">
-        <ObjcBindingNativeLibrary Include="$(MSBuildThisFileDirectory)..\lib\Debug\libReactNative-macOS.a">
-          <Link>libReactNative-macOS.a</Link>
-        </ObjcBindingNativeLibrary>
+    <ItemGroup Condition="'$(Configuration)'!='Release'">
+        <Reference Include="Astound.ReactNative.macOS.Bindings">
+            <HintPath>$(MSBuildThisFileDirectory)..\reference\Debug\Astound.ReactNative.macOS.Bindings.dll</HintPath>
+        </Reference>
     </ItemGroup>
 </Project>
