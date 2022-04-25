@@ -10,4 +10,9 @@
             <HintPath>$(MSBuildThisFileDirectory)..\reference\Debug\Astound.ReactNative.macOS.Bindings.dll</HintPath>
         </Reference>
     </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="$(MSBuildThisFileDirectory)..\content\AccessibilityResources.bundle\**\*.*">
+          <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </BundleResource>
+    </ItemGroup>
 </Project>

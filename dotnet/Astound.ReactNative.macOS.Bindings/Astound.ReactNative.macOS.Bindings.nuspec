@@ -17,7 +17,8 @@
     </dependencies>
   </metadata>
   <files>
-      <file src="..\..\images\astound.png" target="images\" />
+      <file src="..\..\images\astound.png" target="images" />
+      <file src="..\..\xcode\bin\Debug\AccessibilityResources.bundle\**" target="content\AccessibilityResources.bundle" />
       <file src="bin\Debug\Astound.ReactNative.macOS.Bindings.dll" target="reference\Debug" />
       <file src="bin\Release\Astound.ReactNative.macOS.Bindings.dll" target="reference\Release" />
       <file src="Astound.ReactNative.macOS.Bindings.targets" target="build"/>
