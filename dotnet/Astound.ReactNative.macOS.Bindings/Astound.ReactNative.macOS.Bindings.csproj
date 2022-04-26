@@ -56,9 +56,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.ObjcBinding.CSharp.targets" />
   <Target Condition="!Exists('..\..\xcode\ReactNative-macOS\bin\$(Configuration)\libReactNative-macOS.a')" Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec WorkingDirectory="$(SolutionDir)..\xcode" Command="xcodebuild -workspace ReactNative-macOS.xcworkspace -scheme ReactNative-macOS -configuration $(Configuration) ONLY_ACTIVE_ARCH=NO CONFIGURATION_BUILD_DIR=$(SolutionDir)..\xcode\bin\$(Configuration) build" />
+    <Exec WorkingDirectory="..\..\xcode" Command="xcodebuild -workspace ReactNative-macOS.xcworkspace -scheme ReactNative-macOS -configuration $(Configuration) ONLY_ACTIVE_ARCH=NO CONFIGURATION_BUILD_DIR=$(ProjectDir)..\..\xcode\bin\$(Configuration) build" />
   </Target>
   <Target Name="AfterClean">
-    <Exec WorkingDirectory="$(SolutionDir)..\xcode" Command="xcodebuild -workspace ReactNative-macOS.xcworkspace -scheme ReactNative-macOS -configuration $(Configuration) ONLY_ACTIVE_ARCH=NO CONFIGURATION_BUILD_DIR=$(SolutionDir)..\xcode\bin\$(Configuration) clean" />
+    <Exec WorkingDirectory="..\..\xcode" Command="xcodebuild -workspace ReactNative-macOS.xcworkspace -scheme ReactNative-macOS -configuration $(Configuration) ONLY_ACTIVE_ARCH=NO CONFIGURATION_BUILD_DIR=$(ProjectDir)..\..\xcode\bin\$(Configuration) clean" />
   </Target>
 </Project>
