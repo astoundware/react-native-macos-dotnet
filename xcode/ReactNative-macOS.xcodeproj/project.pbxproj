@@ -7,13 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		83ECA2F2EC12F471F2E5D769 /* libPods-ReactNative-macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB21909AC19024C5D52E2F93 /* libPods-ReactNative-macOS.a */; };
+		47E1D6C528183ADC0033F772 /* libDoubleConversion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6C428183ADC0033F772 /* libDoubleConversion.a */; };
+		47E1D6C728183AFD0033F772 /* libFBReactNativeSpec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6C628183AFD0033F772 /* libFBReactNativeSpec.a */; };
+		47E1D6C928183B030033F772 /* libRCT-Folly.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6C828183B030033F772 /* libRCT-Folly.a */; };
+		47E1D6CB28183B110033F772 /* libRCTTypeSafety.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6CA28183B110033F772 /* libRCTTypeSafety.a */; };
+		47E1D6CD28183B320033F772 /* libReact-Core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6CC28183B320033F772 /* libReact-Core.a */; };
+		47E1D6CF28183B380033F772 /* libReact-CoreModules.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6CE28183B380033F772 /* libReact-CoreModules.a */; };
+		47E1D6D128183B4A0033F772 /* libReact-RCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6D028183B4A0033F772 /* libReact-RCTAnimation.a */; };
+		47E1D6D328183B4F0033F772 /* libReact-RCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6D228183B4F0033F772 /* libReact-RCTBlob.a */; };
+		47E1D6D528183B540033F772 /* libReact-RCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6D428183B540033F772 /* libReact-RCTImage.a */; };
+		47E1D6D728183B680033F772 /* libReact-RCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6D628183B680033F772 /* libReact-RCTLinking.a */; };
+		47E1D6D928183B6C0033F772 /* libReact-RCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6D828183B6C0033F772 /* libReact-RCTNetwork.a */; };
+		47E1D6DB28183B710033F772 /* libReact-RCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6DA28183B710033F772 /* libReact-RCTSettings.a */; };
+		47E1D6DD28183B750033F772 /* libReact-RCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6DC28183B750033F772 /* libReact-RCTText.a */; };
+		47E1D6DF28183B790033F772 /* libReact-RCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6DE28183B790033F772 /* libReact-RCTVibration.a */; };
+		47E1D6E128183B920033F772 /* libReact-cxxreact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6E028183B920033F772 /* libReact-cxxreact.a */; };
+		47E1D6E328183B920033F772 /* libReact-jsi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6E228183B920033F772 /* libReact-jsi.a */; };
+		47E1D6E528183B920033F772 /* libReact-jsiexecutor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6E428183B920033F772 /* libReact-jsiexecutor.a */; };
+		47E1D6E728183B920033F772 /* libReact-jsinspector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6E628183B920033F772 /* libReact-jsinspector.a */; };
+		47E1D6E928183BA70033F772 /* libReact-perflogger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6E828183BA70033F772 /* libReact-perflogger.a */; };
+		47E1D6EB28183BAD0033F772 /* libReactCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6EA28183BAD0033F772 /* libReactCommon.a */; };
+		47E1D6ED28183BC10033F772 /* libYoga.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6EC28183BC10033F772 /* libYoga.a */; };
+		47E1D6EF28183BC70033F772 /* libglog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6EE28183BC70033F772 /* libglog.a */; };
 		B992DB702811C33300A251B8 /* ReactNative_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B992DB6F2811C33300A251B8 /* ReactNative_macOS.h */; };
 		B992DB722811C33300A251B8 /* ReactNative_macOS.m in Sources */ = {isa = PBXBuildFile; fileRef = B992DB712811C33300A251B8 /* ReactNative_macOS.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01F3DF25984DE82C3C3C50C4 /* Pods-ReactNative-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNative-macOS.debug.xcconfig"; path = "Target Support Files/Pods-ReactNative-macOS/Pods-ReactNative-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		47E1D6C428183ADC0033F772 /* libDoubleConversion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libDoubleConversion.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6C628183AFD0033F772 /* libFBReactNativeSpec.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFBReactNativeSpec.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6C828183B030033F772 /* libRCT-Folly.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libRCT-Folly.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6CA28183B110033F772 /* libRCTTypeSafety.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRCTTypeSafety.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6CC28183B320033F772 /* libReact-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6CE28183B380033F772 /* libReact-CoreModules.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-CoreModules.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6D028183B4A0033F772 /* libReact-RCTAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6D228183B4F0033F772 /* libReact-RCTBlob.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTBlob.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6D428183B540033F772 /* libReact-RCTImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTImage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6D628183B680033F772 /* libReact-RCTLinking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTLinking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6D828183B6C0033F772 /* libReact-RCTNetwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTNetwork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6DA28183B710033F772 /* libReact-RCTSettings.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTSettings.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6DC28183B750033F772 /* libReact-RCTText.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTText.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6DE28183B790033F772 /* libReact-RCTVibration.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTVibration.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6E028183B920033F772 /* libReact-cxxreact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-cxxreact.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6E228183B920033F772 /* libReact-jsi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-jsi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6E428183B920033F772 /* libReact-jsiexecutor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-jsiexecutor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6E628183B920033F772 /* libReact-jsinspector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-jsinspector.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6E828183BA70033F772 /* libReact-perflogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-perflogger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6EA28183BAD0033F772 /* libReactCommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReactCommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6EC28183BC10033F772 /* libYoga.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libYoga.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6EE28183BC70033F772 /* libglog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglog.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1D6F028183BD80033F772 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		47E1D6F228183BE40033F772 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		B992DB6C2811C33300A251B8 /* libReactNative-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libReactNative-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B992DB6F2811C33300A251B8 /* ReactNative_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactNative_macOS.h; sourceTree = "<group>"; };
 		B992DB712811C33300A251B8 /* ReactNative_macOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactNative_macOS.m; sourceTree = "<group>"; };
@@ -26,7 +71,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83ECA2F2EC12F471F2E5D769 /* libPods-ReactNative-macOS.a in Frameworks */,
+				47E1D6EF28183BC70033F772 /* libglog.a in Frameworks */,
+				47E1D6ED28183BC10033F772 /* libYoga.a in Frameworks */,
+				47E1D6EB28183BAD0033F772 /* libReactCommon.a in Frameworks */,
+				47E1D6E928183BA70033F772 /* libReact-perflogger.a in Frameworks */,
+				47E1D6E128183B920033F772 /* libReact-cxxreact.a in Frameworks */,
+				47E1D6E328183B920033F772 /* libReact-jsi.a in Frameworks */,
+				47E1D6E528183B920033F772 /* libReact-jsiexecutor.a in Frameworks */,
+				47E1D6E728183B920033F772 /* libReact-jsinspector.a in Frameworks */,
+				47E1D6DF28183B790033F772 /* libReact-RCTVibration.a in Frameworks */,
+				47E1D6DD28183B750033F772 /* libReact-RCTText.a in Frameworks */,
+				47E1D6DB28183B710033F772 /* libReact-RCTSettings.a in Frameworks */,
+				47E1D6D928183B6C0033F772 /* libReact-RCTNetwork.a in Frameworks */,
+				47E1D6D728183B680033F772 /* libReact-RCTLinking.a in Frameworks */,
+				47E1D6D528183B540033F772 /* libReact-RCTImage.a in Frameworks */,
+				47E1D6D328183B4F0033F772 /* libReact-RCTBlob.a in Frameworks */,
+				47E1D6D128183B4A0033F772 /* libReact-RCTAnimation.a in Frameworks */,
+				47E1D6CF28183B380033F772 /* libReact-CoreModules.a in Frameworks */,
+				47E1D6CD28183B320033F772 /* libReact-Core.a in Frameworks */,
+				47E1D6CB28183B110033F772 /* libRCTTypeSafety.a in Frameworks */,
+				47E1D6C928183B030033F772 /* libRCT-Folly.a in Frameworks */,
+				47E1D6C728183AFD0033F772 /* libFBReactNativeSpec.a in Frameworks */,
+				47E1D6C528183ADC0033F772 /* libDoubleConversion.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +111,30 @@
 		A0C84954AA56768CD959BA95 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47E1D6F228183BE40033F772 /* JavaScriptCore.framework */,
+				47E1D6F028183BD80033F772 /* AudioToolbox.framework */,
+				47E1D6EE28183BC70033F772 /* libglog.a */,
+				47E1D6EC28183BC10033F772 /* libYoga.a */,
+				47E1D6EA28183BAD0033F772 /* libReactCommon.a */,
+				47E1D6E828183BA70033F772 /* libReact-perflogger.a */,
+				47E1D6E028183B920033F772 /* libReact-cxxreact.a */,
+				47E1D6E228183B920033F772 /* libReact-jsi.a */,
+				47E1D6E428183B920033F772 /* libReact-jsiexecutor.a */,
+				47E1D6E628183B920033F772 /* libReact-jsinspector.a */,
+				47E1D6DE28183B790033F772 /* libReact-RCTVibration.a */,
+				47E1D6DC28183B750033F772 /* libReact-RCTText.a */,
+				47E1D6DA28183B710033F772 /* libReact-RCTSettings.a */,
+				47E1D6D828183B6C0033F772 /* libReact-RCTNetwork.a */,
+				47E1D6D628183B680033F772 /* libReact-RCTLinking.a */,
+				47E1D6D428183B540033F772 /* libReact-RCTImage.a */,
+				47E1D6D228183B4F0033F772 /* libReact-RCTBlob.a */,
+				47E1D6D028183B4A0033F772 /* libReact-RCTAnimation.a */,
+				47E1D6CE28183B380033F772 /* libReact-CoreModules.a */,
+				47E1D6CC28183B320033F772 /* libReact-Core.a */,
+				47E1D6CA28183B110033F772 /* libRCTTypeSafety.a */,
+				47E1D6C828183B030033F772 /* libRCT-Folly.a */,
+				47E1D6C628183AFD0033F772 /* libFBReactNativeSpec.a */,
+				47E1D6C428183ADC0033F772 /* libDoubleConversion.a */,
 				FB21909AC19024C5D52E2F93 /* libPods-ReactNative-macOS.a */,
 			);
 			name = Frameworks;
@@ -293,37 +383,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				EXECUTABLE_PREFIX = lib;
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = (
-					"$(inherited)",
 					"-ObjC",
-					"-l\"DoubleConversion\"",
-					"-l\"FBReactNativeSpec\"",
-					"-l\"RCT-Folly\"",
-					"-l\"RCTTypeSafety\"",
-					"-l\"React-Core\"",
-					"-l\"React-CoreModules\"",
-					"-l\"React-RCTAnimation\"",
-					"-l\"React-RCTBlob\"",
-					"-l\"React-RCTImage\"",
-					"-l\"React-RCTLinking\"",
-					"-l\"React-RCTNetwork\"",
-					"-l\"React-RCTSettings\"",
-					"-l\"React-RCTText\"",
-					"-l\"React-RCTVibration\"",
-					"-l\"React-cxxreact\"",
-					"-l\"React-jsi\"",
-					"-l\"React-jsiexecutor\"",
-					"-l\"React-jsinspector\"",
-					"-l\"React-perflogger\"",
-					"-l\"ReactCommon\"",
-					"-l\"Yoga\"",
-					"-l\"glog\"",
 					"-l\"stdc++\"",
-					"-framework",
-					"\"AudioToolbox\"",
-					"-framework",
-					"\"JavaScriptCore\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -336,37 +399,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				EXECUTABLE_PREFIX = lib;
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = (
-					"$(inherited)",
 					"-ObjC",
-					"-l\"DoubleConversion\"",
-					"-l\"FBReactNativeSpec\"",
-					"-l\"RCT-Folly\"",
-					"-l\"RCTTypeSafety\"",
-					"-l\"React-Core\"",
-					"-l\"React-CoreModules\"",
-					"-l\"React-RCTAnimation\"",
-					"-l\"React-RCTBlob\"",
-					"-l\"React-RCTImage\"",
-					"-l\"React-RCTLinking\"",
-					"-l\"React-RCTNetwork\"",
-					"-l\"React-RCTSettings\"",
-					"-l\"React-RCTText\"",
-					"-l\"React-RCTVibration\"",
-					"-l\"React-cxxreact\"",
-					"-l\"React-jsi\"",
-					"-l\"React-jsiexecutor\"",
-					"-l\"React-jsinspector\"",
-					"-l\"React-perflogger\"",
-					"-l\"ReactCommon\"",
-					"-l\"Yoga\"",
-					"-l\"glog\"",
 					"-l\"stdc++\"",
-					"-framework",
-					"\"AudioToolbox\"",
-					"-framework",
-					"\"JavaScriptCore\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
