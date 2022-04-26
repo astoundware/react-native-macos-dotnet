@@ -2,17 +2,32 @@
 <Project>
     <ItemGroup Condition="'$(Configuration)'=='Release'">
         <Reference Include="Astound.ReactNative.macOS.Bindings">
-            <HintPath>$(MSBuildThisFileDirectory)..\reference\Release\Astound.ReactNative.macOS.Bindings.dll</HintPath>
+            <HintPath>$(MSBuildThisFileDirectory)..\references\Release\Astound.ReactNative.macOS.Bindings.dll</HintPath>
         </Reference>
     </ItemGroup>
     <ItemGroup Condition="'$(Configuration)'!='Release'">
         <Reference Include="Astound.ReactNative.macOS.Bindings">
-            <HintPath>$(MSBuildThisFileDirectory)..\reference\Debug\Astound.ReactNative.macOS.Bindings.dll</HintPath>
+            <HintPath>$(MSBuildThisFileDirectory)..\references\Debug\Astound.ReactNative.macOS.Bindings.dll</HintPath>
         </Reference>
     </ItemGroup>
-    <ItemGroup>
-        <BundleResource Include="$(MSBuildThisFileDirectory)..\content\AccessibilityResources.bundle\**\*.*">
+    <ItemGroup Condition="'$(OutputType)'=='Exe'">
+        <BundleResource Include="$(MSBuildThisFileDirectory)..\resources\AccessibilityResources.bundle\**\*.*">
           <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
         </BundleResource>
     </ItemGroup>
+    <ItemGroup Condition="'$(Configuration)|$(OutputType)'=='Release|Exe'">
+        <BundleResource Condition="Exists('$(ProjectDir)Resources\main.jsbundle')" Include="$(ProjectDir)Resources\main.jsbundle">
+            <Link>Resources\main.jsbundle</Link>
+        </BundleResource>
+        <BundleResource Condition="Exists('$(ProjectDir)Resources\assets')" Include="$(ProjectDir)Resources\assets\**\*.*">
+          <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </BundleResource>
+    </ItemGroup>
+    <Target Condition="'$(Configuration)|$(OutputType)'=='Release|Exe'" Name="PrepareResources">
+        <Exec WorkingDirectory="$(ProjectDir)" Command="$(MSBuildThisFileDirectory)..\scripts\bundle.sh" />
+    </Target>
+    <Target Condition="'$(Configuration)|$(OutputType)'=='Release|Exe'" Name="AfterClean">
+        <Delete Condition="Exists('$(ProjectDir)Resources\main.jsbundle')" Files="$(ProjectDir)Resources\main.jsbundle" />
+        <RemoveDir Condition="Exists('$(ProjectDir)Resources\assets')" Directories="$(ProjectDir)Resources\assets" />
+    </Target>
 </Project>
