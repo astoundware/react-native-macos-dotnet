@@ -52,6 +52,7 @@
       <SmartLink>False</SmartLink>
       <ForceLoad>True</ForceLoad>
       <LinkerFlags>-lstdc++</LinkerFlags>
+      <Frameworks>AudioToolbox JavaScriptCore</Frameworks>
     </NativeReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.ObjcBinding.CSharp.targets" />

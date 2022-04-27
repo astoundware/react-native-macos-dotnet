@@ -12,7 +12,7 @@
     </ItemGroup>
     <ItemGroup Condition="'$(OutputType)'=='Exe'">
         <BundleResource Include="$(MSBuildThisFileDirectory)..\resources\AccessibilityResources.bundle\**\*.*">
-          <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+          <Link>Resources\AccessibilityResources.bundle\%(RecursiveDir)%(Filename)%(Extension)</Link>
         </BundleResource>
     </ItemGroup>
     <ItemGroup Condition="'$(Configuration)|$(OutputType)'=='Release|Exe'">
@@ -20,7 +20,7 @@
             <Link>Resources\main.jsbundle</Link>
         </BundleResource>
         <BundleResource Condition="Exists('$(ProjectDir)Resources\assets')" Include="$(ProjectDir)Resources\assets\**\*.*">
-          <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+          <Link>Resources\assets\%(RecursiveDir)%(Filename)%(Extension)</Link>
         </BundleResource>
     </ItemGroup>
     <Target Condition="'$(Configuration)|$(OutputType)'=='Release|Exe'" Name="PrepareResources">
