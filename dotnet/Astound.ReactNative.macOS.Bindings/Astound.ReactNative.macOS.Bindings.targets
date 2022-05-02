@@ -1,5 +1,5 @@
 ﻿
-<Project InitialTargets="Bundle">
+<Project>
     <ItemGroup Condition="'$(Configuration)'=='Release'">
         <Reference Include="Astound.ReactNative.macOS.Bindings">
             <HintPath>$(MSBuildThisFileDirectory)..\references\Release\Astound.ReactNative.macOS.Bindings.dll</HintPath>
@@ -15,14 +15,15 @@
           <Link>Resources\AccessibilityResources.bundle\%(RecursiveDir)%(Filename)%(Extension)</Link>
         </BundleResource>
     </ItemGroup>
-    <Target Condition="'$(Configuration)|$(OutputType)'=='Release|Exe'" Name="Bundle">
+    <Target Condition="'$(Configuration)|$(OutputType)'=='Release|Exe'" Name="JsBundle" BeforeTargets="_BeforeCoreCompileImageAssets">
         <Exec WorkingDirectory="$(ProjectDir)" Command="$(MSBuildThisFileDirectory)..\scripts\bundle.sh" />
         <ItemGroup>
             <BundleResource Include="Resources\main.jsbundle">
                 <Link>Resources\main.jsbundle</Link>
             </BundleResource>
-            <BundleResource Include="$(ProjectDir)Resources\assets\**\*.*">
-                <Link>Resources\assets\%(RecursiveDir)%(Filename)%(Extension)</Link>
+            <JsAssets Include="Resources\assets\**\*.*" />
+            <BundleResource Include="@(JsAssets)">
+                <Link>Resources\assets\%(JsAssets.RecursiveDir)%(JsAssets.Filename)%(JsAssets.Extension)</Link>
             </BundleResource>
         </ItemGroup>
     </Target>
