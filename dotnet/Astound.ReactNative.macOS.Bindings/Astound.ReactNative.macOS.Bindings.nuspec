@@ -19,7 +19,7 @@
   <files>
       <file src="..\..\images\astound.png" target="images" />
       <file src="..\..\xcode\bin\Debug\AccessibilityResources.bundle\**" target="resources\AccessibilityResources.bundle" />
-      <file src="bundle.sh" target="scripts" />
+      <file src="scripts\**" target="scripts" />
       <file src="bin\Debug\Astound.ReactNative.macOS.Bindings.dll" target="references\Debug" />
       <file src="bin\Release\Astound.ReactNative.macOS.Bindings.dll" target="references\Release" />
       <file src="Astound.ReactNative.macOS.Bindings.targets" target="build"/>

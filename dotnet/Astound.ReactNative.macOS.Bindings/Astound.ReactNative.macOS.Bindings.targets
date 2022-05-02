@@ -15,6 +15,9 @@
           <Link>Resources\AccessibilityResources.bundle\%(RecursiveDir)%(Filename)%(Extension)</Link>
         </BundleResource>
     </ItemGroup>
+    <Target Condition="'$(Configuration)'!='Release' AND '$(OutputType)'=='Exe'" Name="StartPackager" AfterTargets="AfterBuild">
+        <Exec Condition="'$(EnableReactPackager)'!='false'" WorkingDirectory="$(ProjectDir)" Command="$(MSBuildThisFileDirectory)..\scripts\packager.sh" />
+    </Target>
     <Target Condition="'$(Configuration)|$(OutputType)'=='Release|Exe'" Name="JsBundle" BeforeTargets="_BeforeCoreCompileImageAssets">
         <Exec WorkingDirectory="$(ProjectDir)" Command="$(MSBuildThisFileDirectory)..\scripts\bundle.sh" />
         <ItemGroup>
