@@ -1,10 +1,10 @@
 #!/bin/bash
 
+projectPath = $(pwd)
+
 export NODE_BINARY=node
 export CONFIGURATION=Release
 export PLATFORM_NAME=macosx
-export UNLOCALIZED_RESOURCES_FOLDER_PATH=Resources
-export CONFIGURATION_BUILD_DIR=$(pwd)
 
 found=false
 
@@ -16,5 +16,8 @@ do
         cd ..
     fi
 done
+
+export CONFIGURATION_BUILD_DIR=$(pwd)
+export UNLOCALIZED_RESOURCES_FOLDER_PATH=${projectPath/$CONFIGURATION_BUILD_DIR/}/Resources
 
 ./node_modules/react-native-macos/scripts/react-native-xcode.sh
