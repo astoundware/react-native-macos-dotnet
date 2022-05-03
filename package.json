@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-native": "^0.64.0",
+    "react-native-macos": "^0.64.30"
+  }
+}

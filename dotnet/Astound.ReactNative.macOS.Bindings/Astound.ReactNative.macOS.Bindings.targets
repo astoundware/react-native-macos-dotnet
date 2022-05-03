@@ -1,0 +1,37 @@
+﻿
+<Project>
+    <ItemGroup Condition="'$(Configuration)'=='Release'">
+        <Reference Include="Astound.ReactNative.macOS.Bindings">
+            <HintPath>$(MSBuildThisFileDirectory)..\references\Release\Astound.ReactNative.macOS.Bindings.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Configuration)'!='Release'">
+        <Reference Include="Astound.ReactNative.macOS.Bindings">
+            <HintPath>$(MSBuildThisFileDirectory)..\references\Debug\Astound.ReactNative.macOS.Bindings.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup Condition="'$(OutputType)'=='Exe'">
+        <BundleResource Include="$(MSBuildThisFileDirectory)..\resources\AccessibilityResources.bundle\**\*.*">
+          <Link>Resources\AccessibilityResources.bundle\%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </BundleResource>
+    </ItemGroup>
+    <Target Condition="'$(Configuration)'!='Release' AND '$(OutputType)'=='Exe'" Name="StartPackager" AfterTargets="AfterBuild">
+        <Exec Condition="'$(EnableReactPackager)'!='false'" WorkingDirectory="$(ProjectDir)" Command="$(MSBuildThisFileDirectory)..\scripts\packager.sh" />
+    </Target>
+    <Target Condition="'$(Configuration)|$(OutputType)'=='Release|Exe'" Name="JsBundle" BeforeTargets="_BeforeCoreCompileImageAssets">
+        <Exec WorkingDirectory="$(ProjectDir)" Command="$(MSBuildThisFileDirectory)..\scripts\bundle.sh" />
+        <ItemGroup>
+            <BundleResource Include="Resources\main.jsbundle">
+                <Link>Resources\main.jsbundle</Link>
+            </BundleResource>
+            <JsAssets Include="Resources\assets\**\*.*" />
+            <BundleResource Include="@(JsAssets)">
+                <Link>Resources\assets\%(JsAssets.RecursiveDir)%(JsAssets.Filename)%(JsAssets.Extension)</Link>
+            </BundleResource>
+        </ItemGroup>
+    </Target>
+    <Target Condition="'$(Configuration)|$(OutputType)'=='Release|Exe'" Name="AfterClean">
+        <Delete Condition="Exists('Resources\main.jsbundle')" Files="Resources\main.jsbundle" />
+        <RemoveDir Condition="Exists('Resources\assets')" Directories="Resources\assets" />
+    </Target>
+</Project>
