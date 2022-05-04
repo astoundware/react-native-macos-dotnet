@@ -11,6 +11,8 @@
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
     <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    <Description>This library provides extensions for simplifying the creation of React Native apps on macOS.</Description>
+    <ReleaseVersion>0.64.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -26,6 +28,8 @@
     <IncludeMonoRuntime>false</IncludeMonoRuntime>
     <UseSGen>false</UseSGen>
     <HttpClientHandler></HttpClientHandler>
+    <LinkMode>None</LinkMode>
+    <AOTMode>None</AOTMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
@@ -39,6 +43,8 @@
     <IncludeMonoRuntime>false</IncludeMonoRuntime>
     <UseSGen>false</UseSGen>
     <HttpClientHandler></HttpClientHandler>
+    <LinkMode>None</LinkMode>
+    <AOTMode>None</AOTMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -55,6 +61,9 @@
     <ProjectReference Include="..\Astound.ReactNative.macOS.Bindings\Astound.ReactNative.macOS.Bindings.csproj">
       <Name>Astound.ReactNative.macOS.Bindings</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Astound.ReactNative.macOS.Extensions.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>
