@@ -50,12 +50,19 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Mac" />
+    <Reference Include="Astound.ReactNative.Modules">
+      <HintPath>..\packages\Astound.ReactNative.Modules.1.0.0\lib\netstandard2.0\Astound.ReactNative.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="Astound.ReactNative.Modules.ObjC">
+      <HintPath>..\packages\Astound.ReactNative.Modules.ObjC.1.0.0\lib\netstandard2.0\Astound.ReactNative.Modules.ObjC.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReactAppDelegate.cs" />
     <Compile Include="ReactViewControllerBase.cs" />
     <Compile Include="IReactAppDelegate.cs" />
+    <Compile Include="ReactFunctionsWrapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Astound.ReactNative.macOS.Bindings\Astound.ReactNative.macOS.Bindings.csproj">
@@ -64,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Astound.ReactNative.macOS.Extensions.nuspec" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>
