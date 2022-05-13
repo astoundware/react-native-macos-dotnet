@@ -63,6 +63,7 @@
     <Compile Include="ReactViewControllerBase.cs" />
     <Compile Include="IReactAppDelegate.cs" />
     <Compile Include="ReactFunctionsWrapper.cs" />
+    <Compile Include="ReactEventEmitter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Astound.ReactNative.macOS.Bindings\Astound.ReactNative.macOS.Bindings.csproj">
