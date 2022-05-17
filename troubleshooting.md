@@ -62,3 +62,17 @@ Please see below for a list of possible problems and potential solutions.
         protected override string FallbackResourceName => "fallback";
         ```
         Typically, `BundleRoot` returns the name of the entry JS file to use when debugging and `FallbackResourceName` returns the name of the bundle used by release builds.
+* The React packager (Metro) runs every time I build my project.
+    * This is expected behavior. However, if you would like to disable this behavior, you may add the `EnableReactPackager` property to your project file.
+        ```
+        <PropertyGroup>
+            <EnableReactPackager>false</EnableReactPackager>
+        </PropertyGroup>
+        ```
+* My app is trying to connect to the React packager (Metro) when I want it to use the local bundle.
+    * By default, the local bundle is only used for configurations named "Release". You can specify that another configuration should use the local bundle, by adding the `IsReactRelease` property to your project file.
+        ```
+        <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+            <IsReactRelease>true</IsReactRelease>
+        </PropertyGroup>
+        ```
