@@ -53,15 +53,10 @@ Please see below for a list of possible problems and potential solutions.
         ```
 * When debugging the app, the app is blank and the Metro console contains the following error:
     > Error: EISDIR: illegal operation on a directory
-    * Your JavaScript app likely does not contain the default entry point of index.js or main.jsbundle. In your `AppDelegate`, override the `BundleRoot` property to return the correct value:
+    * Your JavaScript app likely does not contain the default entry point of index.js. In your `AppDelegate`, override the `BundleRoot` property to return the correct value:
         ```
         protected override string BundleRoot => "entry";
         ```
-        AND/OR override the `FallbackResourceName` property to return the correct value:
-        ```
-        protected override string FallbackResourceName => "fallback";
-        ```
-        Typically, `BundleRoot` returns the name of the entry JS file to use when debugging and `FallbackResourceName` returns the name of the bundle used by release builds.
 * The React packager (Metro) runs every time I build my project.
     * This is expected behavior. However, if you would like to disable this behavior, you may add the `EnableReactPackager` property to your project file.
         ```
