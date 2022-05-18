@@ -7,7 +7,7 @@ A framework for building native macOS apps with React and .NET. Use React Native
 * [Xamarin.Mac](https://docs.microsoft.com/en-us/xamarin/mac/get-started/)
 
 ## Getting Started
-Follow the steps in [this guide](getting-started.md) to create your first React Native for macOS app.
+Follow the steps in [this guide](getting-started.md) to create your first app using **React Native for macOS + .NET**.
 
 ## Contributing
 Most contributions are welcome, but those not meeting the project's goals or standards may be rejected.
