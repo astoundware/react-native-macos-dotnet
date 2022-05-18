@@ -38,6 +38,7 @@ If an issue does not exist for the improvement you would like to make, please cr
 * Use MSBuild or Visual Studio to build the solution.
     * I have not had success building it with `dotnet build`.
 * Run `make` or `make pack` in the Astound.ReactNative.macOS.Bindings directory to build and package the bindings library.
+* Run `make` or `make pack` in the Astound.ReactNative.macOS.Extensions directory to build and package the extensions library.
 
 ## License
 This .NET extension, the underlying React Native for macOS extension, including modifications to the original Facebook source code, and all newly contributed code is provided under the [MIT License](LICENSE). The React Native for macOS extension is copyright Microsoft. Portions of the React Native for macOS extension derived from React Native are copyright Facebook.

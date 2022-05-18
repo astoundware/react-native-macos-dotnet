@@ -7,13 +7,13 @@ Once that has been completed, you should have folders for each platform along wi
 1. Empty (or recreate) the macos folder.
     > Note: You may also remove the android and/or ios folders if you are not developing for those platforms.
 1. Use _Visual Studio for Mac_ to create a new Mac Cocoa App in the macos folder.
-    ![Cocoa App Project](images/cocoa-app-project.png)
+    ![Cocoa App Project](../images/cocoa-app-project.png)
     1. Target macOS Mojave 10.14 or higher.
-        ![Configure Mac App](images/configure-mac-app.png)
+        ![Configure Mac App](../images/configure-mac-app.png)
 
 ### Installing the NuGet Package
 Now that we have a basic Xamarin macOS app, we're going to modify it to call React Native. This is where the `Astound.ReactNative.macOS.Extensions` package comes in. Select your project and use _Project>Manage NuGet Packages..._ from the menu bar to install it.
-![Manage NuGet Packages](images/manage-nuget-packages.png)
+![Manage NuGet Packages](../images/manage-nuget-packages.png)
 
 ### Modifying the AppDelegate
 The `Astound.ReactNative.macOS.Extensions` package provides a pre-configured `AppDelegate` class called `ReactAppDelegate`. This class creates a React bridge and tells it where to access the JavaScript. Open your `AppDelegate.cs` file and perform the following steps to use `ReactAppDelegate`.
