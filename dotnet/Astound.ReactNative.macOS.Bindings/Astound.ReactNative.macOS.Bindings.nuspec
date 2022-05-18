@@ -23,5 +23,6 @@
       <file src="bin\Debug\Astound.ReactNative.macOS.Bindings.dll" target="references\Debug" />
       <file src="bin\Release\Astound.ReactNative.macOS.Bindings.dll" target="references\Release" />
       <file src="Astound.ReactNative.macOS.Bindings.targets" target="build"/>
+      <file src="Astound.ReactNative.macOS.Bindings.props" target="build"/>
   </files>
 </package>

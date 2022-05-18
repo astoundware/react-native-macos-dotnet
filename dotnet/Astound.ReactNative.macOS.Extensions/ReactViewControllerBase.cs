@@ -24,7 +24,7 @@ namespace Astound.ReactNative.macOS.Extensions
 
             if (appDelegate == null)
             {
-                Debug.WriteLine("Cannot initialize root view because app delegate is not an IReactAppDelegate");
+                Trace.WriteLine("Cannot initialize root view because app delegate is not an IReactAppDelegate");
                 return;
             }
 

@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 using Foundation;
 
-namespace Astound.ReactNative.macOS.Bindings
+namespace Astound.ReactNative.Bindings
 {
     [StructLayout(LayoutKind.Sequential)]
     public struct RCTMethodInfo
@@ -13,7 +13,7 @@ namespace Astound.ReactNative.macOS.Bindings
         public bool isSync;
     }
 
-    public static class CFunctions
+    public static class RCTFunctions
     {
         [DllImport("__Internal")]
         public static extern void RCTRegisterModule(IntPtr module);

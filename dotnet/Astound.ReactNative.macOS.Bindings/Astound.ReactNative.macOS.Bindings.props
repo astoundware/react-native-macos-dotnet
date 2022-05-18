@@ -1,0 +1,6 @@
+﻿
+<Project>
+    <PropertyGroup Condition="'$(Configuration)'=='Release'">
+        <IsReactRelease>true</IsReactRelease>
+    </PropertyGroup>
+</Project>
