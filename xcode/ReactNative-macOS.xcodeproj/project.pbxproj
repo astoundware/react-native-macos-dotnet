@@ -29,6 +29,7 @@
 		47E1D6EB28183BAD0033F772 /* libReactCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6EA28183BAD0033F772 /* libReactCommon.a */; };
 		47E1D6ED28183BC10033F772 /* libYoga.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6EC28183BC10033F772 /* libYoga.a */; };
 		47E1D6EF28183BC70033F772 /* libglog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6EE28183BC70033F772 /* libglog.a */; };
+		B916F81C2849307D002DEDF4 /* libRNCPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B916F81B2849307D002DEDF4 /* libRNCPicker.a */; };
 		B992DB702811C33300A251B8 /* ReactNative_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B992DB6F2811C33300A251B8 /* ReactNative_macOS.h */; };
 		B992DB722811C33300A251B8 /* ReactNative_macOS.m in Sources */ = {isa = PBXBuildFile; fileRef = B992DB712811C33300A251B8 /* ReactNative_macOS.m */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		47E1D6EE28183BC70033F772 /* libglog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglog.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E1D6F028183BD80033F772 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		47E1D6F228183BE40033F772 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		B916F81B2849307D002DEDF4 /* libRNCPicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNCPicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B992DB6C2811C33300A251B8 /* libReactNative-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libReactNative-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B992DB6F2811C33300A251B8 /* ReactNative_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactNative_macOS.h; sourceTree = "<group>"; };
 		B992DB712811C33300A251B8 /* ReactNative_macOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactNative_macOS.m; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B916F81C2849307D002DEDF4 /* libRNCPicker.a in Frameworks */,
 				47E1D6EF28183BC70033F772 /* libglog.a in Frameworks */,
 				47E1D6ED28183BC10033F772 /* libYoga.a in Frameworks */,
 				47E1D6EB28183BAD0033F772 /* libReactCommon.a in Frameworks */,
@@ -111,6 +114,7 @@
 		A0C84954AA56768CD959BA95 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B916F81B2849307D002DEDF4 /* libRNCPicker.a */,
 				47E1D6F228183BE40033F772 /* JavaScriptCore.framework */,
 				47E1D6F028183BD80033F772 /* AudioToolbox.framework */,
 				47E1D6EE28183BC70033F772 /* libglog.a */,

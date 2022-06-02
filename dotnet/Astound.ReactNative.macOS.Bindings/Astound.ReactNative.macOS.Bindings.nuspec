@@ -2,7 +2,7 @@
 <package >
   <metadata minClientVersion="2.5">
     <id>Astound.ReactNative.macOS.Bindings</id>
-    <version>0.64.0</version>
+    <version>0.64.1</version>
     <title>Astound.ReactNative.macOS.Bindings</title>
     <authors>Astound</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -12,6 +12,9 @@
     <description>This bindings library enables you to create a React Native app for macOS.</description>
     <copyright>Copyright © 2022 Astound</copyright>
     <tags>React macOS</tags>
+    <releaseNotes>
+      - Added picker support via @react-native-picker/picker
+    </releaseNotes>
     <dependencies>
       <group targetFramework="Xamarin.Mac2.0" />
     </dependencies>
