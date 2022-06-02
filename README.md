@@ -12,6 +12,10 @@ Follow the steps in [this guide](docs/getting-started.md) to create your first a
 ## Troubleshooting
 Should you run into any problems, please refer to [this guide](docs/troubleshooting.md) for common pitfalls.
 
+## Third-Party Components
+In addition to the built-in components provided by React Native, this extension includes some third-party components that you may find useful. Please refer to the documentation provided by each component for instructions on how to use them. Please note that any instructions related to CocoaPods or linking can be skipped.
+* [@react-native-picker/picker](https://github.com/react-native-picker/picker/tree/v2.4.1)
+
 ## Contributing
 Most contributions are welcome, but those not meeting the project's goals or standards may be rejected.
 
