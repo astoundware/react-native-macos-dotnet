@@ -8,7 +8,7 @@
     <RootNamespace>Astound.ReactNative.macOS.Bindings</RootNamespace>
     <PackageId>Astound.ReactNative.macOS.Bindings</PackageId>
     <Description>This bindings library enables you to create a React Native app for macOS.</Description>
-    <ReleaseVersion>0.64.0</ReleaseVersion>
+    <ReleaseVersion>0.64.1</ReleaseVersion>
     <Copyright>Copyright © 2022 Astound</Copyright>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

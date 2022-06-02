@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@react-native-picker/picker": "^2.4.1",
     "react-native": "^0.64.0",
     "react-native-macos": "^0.64.30"
   }

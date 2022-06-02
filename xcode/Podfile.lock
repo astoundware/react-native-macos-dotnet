@@ -267,6 +267,8 @@ PODS:
     - React-cxxreact (= 0.64.30)
     - React-jsi (= 0.64.30)
     - React-perflogger (= 0.64.30)
+  - RNCPicker (2.4.1):
+    - React-Core
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -300,6 +302,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native-macos/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native-macos/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native-macos/ReactCommon`)
+  - "RNCPicker (from `../node_modules/@react-native-picker/picker`)"
   - Yoga (from `../node_modules/react-native-macos/ReactCommon/yoga`)
 
 EXTERNAL SOURCES:
@@ -359,6 +362,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-macos/ReactCommon/runtimeexecutor"
   ReactCommon:
     :path: "../node_modules/react-native-macos/ReactCommon"
+  RNCPicker:
+    :path: "../node_modules/@react-native-picker/picker"
   Yoga:
     :path: "../node_modules/react-native-macos/ReactCommon/yoga"
 
@@ -366,7 +371,7 @@ SPEC CHECKSUMS:
   boost-for-react-native: d5ad1140010aa8cb622323a781ecbeab4425d19a
   DoubleConversion: 0ea4559a49682230337df966e735d6cc7760108e
   FBLazyVector: 8a96f324df8c1bc4e2f7e2163d704ec364f0bc6c
-  FBReactNativeSpec: ff500b1184dd8c807e211c4066d7e4953b500be7
+  FBReactNativeSpec: e1966c1bee3d2c5708c86cd9f57cd67ddbccaec5
   glog: 0dc7efada961c0793012970b60faebbd58b0decb
   RCT-Folly: b3998425a8ee9f695f57a204dc494534246f0fe9
   RCTRequired: 8903667b081ec6b4b870c6b25ff1038eef62db0d
@@ -391,6 +396,7 @@ SPEC CHECKSUMS:
   React-RCTVibration: 42a79e144eb66f2f1baa0d361c68d1e977046861
   React-runtimeexecutor: f151eec4a900bddc9f127df64a66a01275d3acf8
   ReactCommon: 0665778a9e30416d3bff636251a34d1e93ee59af
+  RNCPicker: abc646b53a3d28ccfa3232c927a0ca52e0cf024d
   Yoga: 1ea22d438a06b78c080c477ecadd4eae4c4907f4
 
 PODFILE CHECKSUM: 02223eae78fb65d114620ba53ed961871c5f1342
