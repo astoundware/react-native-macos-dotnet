@@ -30,3 +30,9 @@ xcuserdata/
 
 # Output directory used by dotnet build scripts
 bin/
+
+# Build generated
+build/
+
+# .env files
+.xcode.env

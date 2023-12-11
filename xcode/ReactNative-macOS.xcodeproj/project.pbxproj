@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		396A05638549EBB36D8D0BE0 /* libPods-ReactNative-macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB21909AC19024C5D52E2F93 /* libPods-ReactNative-macOS.a */; };
 		47E1D6C528183ADC0033F772 /* libDoubleConversion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6C428183ADC0033F772 /* libDoubleConversion.a */; };
 		47E1D6C728183AFD0033F772 /* libFBReactNativeSpec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6C628183AFD0033F772 /* libFBReactNativeSpec.a */; };
 		47E1D6C928183B030033F772 /* libRCT-Folly.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1D6C828183B030033F772 /* libRCT-Folly.a */; };
@@ -96,6 +97,7 @@
 				47E1D6C928183B030033F772 /* libRCT-Folly.a in Frameworks */,
 				47E1D6C728183AFD0033F772 /* libFBReactNativeSpec.a in Frameworks */,
 				47E1D6C528183ADC0033F772 /* libDoubleConversion.a in Frameworks */,
+				396A05638549EBB36D8D0BE0 /* libPods-ReactNative-macOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +280,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -308,6 +310,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -326,6 +329,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -336,7 +340,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -366,6 +370,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -377,6 +382,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = macosx;
 			};
 			name = Release;
