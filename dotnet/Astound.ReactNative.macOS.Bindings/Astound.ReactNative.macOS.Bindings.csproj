@@ -1,51 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProjectGuid>{9F8D20D8-8BED-49D6-A6DB-03DBF5E3BE8E}</ProjectGuid>
-    <ProjectTypeGuids>{810C163F-4746-4721-8B8E-88A3673A62EA};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <OutputType>Library</OutputType>
-    <MacResourcePrefix>Resources</MacResourcePrefix>
-    <RootNamespace>Astound.ReactNative.macOS.Bindings</RootNamespace>
-    <PackageId>Astound.ReactNative.macOS.Bindings</PackageId>
-    <Description>This bindings library enables you to create a React Native app for macOS.</Description>
-    <ReleaseVersion>0.64.1</ReleaseVersion>
-    <Copyright>Copyright © 2022 Astound</Copyright>
+    <TargetFramework>net7.0-macos</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <LangVersion>Default</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <DefineConstants></DefineConstants>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <LangVersion>Default</LangVersion>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="Xamarin.Mac" />
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs"/>
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs"/>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Astound.ReactNative.macOS.Bindings.nuspec" />
-    <None Include="Astound.ReactNative.macOS.Bindings.targets" />
-  </ItemGroup>
+
   <ItemGroup>
     <NativeReference Include="..\..\xcode\bin\$(Configuration)\libReactNative-macOS.a">
       <Kind>Static</Kind>
@@ -55,8 +20,8 @@
       <Frameworks>AudioToolbox JavaScriptCore</Frameworks>
     </NativeReference>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.ObjcBinding.CSharp.targets" />
-  <Target Condition="!Exists('..\..\xcode\ReactNative-macOS\bin\$(Configuration)\libReactNative-macOS.a')" Name="PreBuild" BeforeTargets="PreBuildEvent">
+
+  <Target Condition="!Exists('..\..\xcode\bin\$(Configuration)\libReactNative-macOS.a')" Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec WorkingDirectory="..\..\xcode" Command="xcodebuild -workspace ReactNative-macOS.xcworkspace -scheme ReactNative-macOS -configuration $(Configuration) ONLY_ACTIVE_ARCH=NO CONFIGURATION_BUILD_DIR=$(ProjectDir)..\..\xcode\bin\$(Configuration) build" />
   </Target>
   <Target Name="AfterClean">
