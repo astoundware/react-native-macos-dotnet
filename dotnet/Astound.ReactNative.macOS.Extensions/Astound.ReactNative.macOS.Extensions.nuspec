@@ -2,7 +2,7 @@
 <package >
   <metadata minClientVersion="2.5">
     <id>Astound.ReactNative.macOS.Extensions</id>
-    <version>0.64.1</version>
+    <version>0.71.0</version>
     <title>Astound.ReactNative.macOS.Extensions</title>
     <authors>Astound</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -14,11 +14,11 @@
     <copyright>Copyright © 2022 Astound</copyright>
     <tags>React macOS</tags>
     <releaseNotes>
-      - Fixed bug that prevented some warnings from being logged
+      - Targeted .NET 8
     </releaseNotes>
     <dependencies>
-      <group targetFramework="Xamarin.Mac2.0">
-        <dependency id="Astound.ReactNative.macOS.Bindings" version="0.64.1" />
+      <group targetFramework="net8.0-macos10.15">
+        <dependency id="Astound.ReactNative.macOS.Bindings" version="0.71.0" />
         <dependency id="Astound.ReactNative.Modules" version="1.0.0" />
         <dependency id="Astound.ReactNative.Modules.ObjC" version="1.0.0" />
         <dependency id="Astound.ReactNative.Generators.ObjC" version="0.64.0" />
@@ -28,6 +28,6 @@
   <files>
     <file src="..\..\docs\getting-started.md" target="docs" />
     <file src="..\..\images\astound.png" target="images" />
-    <file src="bin\Release\Astound.ReactNative.macOS.Extensions.dll" target="lib\xamarinmac20" />
+    <file src="bin\Release\net8.0-macos\Astound.ReactNative.macOS.Extensions.dll" target="lib\net8.0-macos10.15" />
   </files>
 </package>

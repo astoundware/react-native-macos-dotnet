@@ -17,7 +17,7 @@
       <SmartLink>False</SmartLink>
       <ForceLoad>True</ForceLoad>
       <LinkerFlags>-lstdc++</LinkerFlags>
-      <Frameworks>AudioToolbox JavaScriptCore</Frameworks>
+      <Frameworks>JavaScriptCore</Frameworks>
     </NativeReference>
   </ItemGroup>
 

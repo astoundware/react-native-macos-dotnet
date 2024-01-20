@@ -1,15 +1,12 @@
-colon := :
-$(colon) := :
-
 all: clean build pack
 
 clean:
-	msbuild /t$(:)Clean /p$(:)Configuration=Debug
-	msbuild /t$(:)Clean /p$(:)Configuration=Release
+	dotnet clean -c Debug
+	dotnet clean -c Release
 
 build:
-	msbuild /t$(:)Build /p$(:)Configuration=Debug
-	msbuild /t$(:)Build /p$(:)Configuration=Release
+	dotnet build -c Debug
+	dotnet build -c Release
 
 pack:
 	nuget pack Astound.ReactNative.macOS.Bindings.nuspec
