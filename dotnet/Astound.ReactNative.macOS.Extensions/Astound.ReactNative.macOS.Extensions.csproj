@@ -1,78 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E4AAE7D0-D70F-4933-8A73-D72A3E32497C}</ProjectGuid>
-    <ProjectTypeGuids>{A3F8F2AB-B479-4A4A-A458-A89E7DC349F1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Astound.ReactNative.macOS.Extensions</RootNamespace>
-    <AssemblyName>Astound.ReactNative.macOS.Extensions</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
-    <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
-    <Description>This library provides extensions for simplifying the creation of React Native apps on macOS.</Description>
-    <ReleaseVersion>0.64.1</ReleaseVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <EnableCodeSigning>false</EnableCodeSigning>
-    <CreatePackage>false</CreatePackage>
-    <EnablePackageSigning>false</EnablePackageSigning>
-    <IncludeMonoRuntime>false</IncludeMonoRuntime>
-    <UseSGen>false</UseSGen>
-    <HttpClientHandler></HttpClientHandler>
-    <LinkMode>None</LinkMode>
-    <AOTMode>None</AOTMode>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <DefineConstants>__MACOS__;__UNIFIED__;TRACE;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <EnableCodeSigning>false</EnableCodeSigning>
-    <CreatePackage>false</CreatePackage>
-    <EnablePackageSigning>false</EnablePackageSigning>
-    <IncludeMonoRuntime>false</IncludeMonoRuntime>
-    <UseSGen>false</UseSGen>
-    <HttpClientHandler></HttpClientHandler>
-    <LinkMode>None</LinkMode>
-    <AOTMode>None</AOTMode>
+    <TargetFramework>net7.0-macos</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="Xamarin.Mac" />
-    <Reference Include="Astound.ReactNative.Modules">
-      <HintPath>..\packages\Astound.ReactNative.Modules.1.0.0\lib\netstandard2.0\Astound.ReactNative.Modules.dll</HintPath>
-    </Reference>
-    <Reference Include="Astound.ReactNative.Modules.ObjC">
-      <HintPath>..\packages\Astound.ReactNative.Modules.ObjC.1.0.0\lib\netstandard2.0\Astound.ReactNative.Modules.ObjC.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\Astound.ReactNative.macOS.Bindings\Astound.ReactNative.macOS.Bindings.csproj"/>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReactAppDelegate.cs" />
-    <Compile Include="ReactViewControllerBase.cs" />
-    <Compile Include="IReactAppDelegate.cs" />
-    <Compile Include="ReactFunctionsWrapper.cs" />
-    <Compile Include="ReactEventEmitter.cs" />
+    <PackageReference Include="Astound.ReactNative.Modules.ObjC" Version="1.0.0"/>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Astound.ReactNative.macOS.Bindings\Astound.ReactNative.macOS.Bindings.csproj">
-      <Name>Astound.ReactNative.macOS.Bindings</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Astound.ReactNative.macOS.Extensions.nuspec" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>

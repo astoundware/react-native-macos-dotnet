@@ -7,22 +7,19 @@ namespace Astound.ReactNative.macOS.Extensions
 {
     public abstract class ReactViewControllerBase : NSViewController
     {
-        protected RCTRootView _rootView;
+        protected RCTRootView _rootView = null!;
 
         protected abstract string JsModuleName { get; }
 
         public ReactViewControllerBase(IntPtr handle) : base(handle)
         {
-
         }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 
-            var appDelegate = NSApplication.SharedApplication.Delegate as IReactAppDelegate;
-
-            if (appDelegate == null)
+            if (NSApplication.SharedApplication.Delegate is not IReactAppDelegate appDelegate)
             {
                 Trace.WriteLine("Cannot initialize root view because app delegate is not an IReactAppDelegate");
                 return;
