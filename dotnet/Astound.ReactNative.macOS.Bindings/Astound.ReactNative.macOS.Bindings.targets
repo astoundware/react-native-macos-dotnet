@@ -1,5 +1,15 @@
 ﻿
 <Project>
+    <ItemGroup Condition="'$(IsReactRelease)'=='true'">
+        <Reference Include="Astound.ReactNative.macOS.Bindings">
+            <HintPath>$(MSBuildThisFileDirectory)..\references\Release\Astound.ReactNative.macOS.Bindings.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup Condition="'$(IsReactRelease)'!='true'">
+        <Reference Include="Astound.ReactNative.macOS.Bindings">
+            <HintPath>$(MSBuildThisFileDirectory)..\references\Debug\Astound.ReactNative.macOS.Bindings.dll</HintPath>
+        </Reference>
+    </ItemGroup>
     <ItemGroup Condition="'$(OutputType)'=='Exe'">
         <BundleResource Include="$(MSBuildThisFileDirectory)..\resources\AccessibilityResources.bundle\**\*.*">
           <Link>Resources\AccessibilityResources.bundle\%(RecursiveDir)%(Filename)%(Extension)</Link>

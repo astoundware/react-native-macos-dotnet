@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <NativeReference Include="..\..\xcode\bin\libReactNative-macOS.a">
+    <NativeReference Include="..\..\xcode\bin\$(Configuration)\libReactNative-macOS.a">
       <Kind>Static</Kind>
       <SmartLink>False</SmartLink>
       <ForceLoad>True</ForceLoad>
@@ -21,10 +21,10 @@
     </NativeReference>
   </ItemGroup>
 
-  <Target Condition="!Exists('..\..\xcode\bin\libReactNative-macOS.a')" Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec WorkingDirectory="..\..\xcode" Command="xcodebuild -workspace ReactNative-macOS.xcworkspace -scheme ReactNative-macOS -configuration Release ONLY_ACTIVE_ARCH=NO CONFIGURATION_BUILD_DIR=$(ProjectDir)..\..\xcode\bin build" />
+  <Target Condition="!Exists('..\..\xcode\bin\$(Configuration)\libReactNative-macOS.a')" Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec WorkingDirectory="..\..\xcode" Command="xcodebuild -workspace ReactNative-macOS.xcworkspace -scheme ReactNative-macOS -configuration $(Configuration) ONLY_ACTIVE_ARCH=NO CONFIGURATION_BUILD_DIR=$(ProjectDir)..\..\xcode\bin\$(Configuration) build" />
   </Target>
   <Target Name="AfterClean">
-    <Exec WorkingDirectory="..\..\xcode" Command="xcodebuild -workspace ReactNative-macOS.xcworkspace -scheme ReactNative-macOS -configuration Release ONLY_ACTIVE_ARCH=NO CONFIGURATION_BUILD_DIR=$(ProjectDir)..\..\xcode\bin clean" />
+    <Exec WorkingDirectory="..\..\xcode" Command="xcodebuild -workspace ReactNative-macOS.xcworkspace -scheme ReactNative-macOS -configuration $(Configuration) ONLY_ACTIVE_ARCH=NO CONFIGURATION_BUILD_DIR=$(ProjectDir)..\..\xcode\bin\$(Configuration) clean" />
   </Target>
 </Project>
