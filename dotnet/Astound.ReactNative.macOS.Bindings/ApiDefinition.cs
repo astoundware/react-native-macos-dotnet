@@ -23,10 +23,14 @@ namespace Astound.ReactNative.macOS.Bindings
         [Static]
         [Export("sharedSettings")]
         RCTBundleURLProvider SharedSettings();
+        
+        // -(NSURL *)jsBundleURLForSplitBundleRoot:(NSString *)bundleRoot;
+        [Export("jsBundleURLForBundleRoot:")]
+        NSUrl JsBundleURLForBundleRoot(string bundleRoot);
 
-        // -(NSURL *)jsBundleURLForBundleRoot:(NSString *)bundleRoot fallbackResource:(NSString *)resourceName;
-        [Export("jsBundleURLForBundleRoot:fallbackResource:")]
-        NSUrl JsBundleURLForBundleRoot(string bundleRoot, [NullAllowed] string resourceName);
+        // -(NSURL *)jsBundleURLForBundleRoot:(NSString *)bundleRoot fallbackExtension:(NSString *)extension;
+        [Export("jsBundleURLForBundleRoot:fallbackExtension:")]
+        NSUrl JsBundleURLForBundleRoot(string bundleRoot, [NullAllowed] string fallbackExtension);
     }
 
     // @interface RCTRootView : RCTUIView
@@ -37,7 +41,7 @@ namespace Astound.ReactNative.macOS.Bindings
         [Export("initWithBundleURL:moduleName:initialProperties:launchOptions:")]
         IntPtr Constructor(NSUrl bundleURL, string moduleName, [NullAllowed] NSDictionary initialProperties, [NullAllowed] NSDictionary launchOptions);
 
-        // - (instancetype)initWithBridge:(RCTBridge *)bridge moduleName:(NSString*) moduleName initialProperties:(NSDictionary*) initialProperties
+        // -(instancetype)initWithBridge:(RCTBridge *)bridge moduleName:(NSString*) moduleName initialProperties:(NSDictionary*) initialProperties
         [Export("initWithBridge:moduleName:initialProperties:")]
         IntPtr Constructor(RCTBridge bridge, string moduleName, [NullAllowed] NSDictionary initialProperties);
     }

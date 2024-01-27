@@ -12,7 +12,7 @@ namespace Astound.ReactNative.macOS.Extensions
         public RCTBridge Bridge { get; private set; } = null!;
 
         protected virtual string BundleRoot => "index";
-        protected virtual string FallbackResourceName => "main";
+        protected virtual string FallbackExtension => "jsbundle";
 
         protected virtual IReactModuleRegistry ModuleRegistry { get; } =
             new ReactModuleRegistry(ReactFunctionsWrapper.Self);
@@ -35,7 +35,7 @@ namespace Astound.ReactNative.macOS.Extensions
         {
             var settings = RCTBundleURLProvider.SharedSettings();
 
-            return settings.JsBundleURLForBundleRoot(BundleRoot, FallbackResourceName);
+            return settings.JsBundleURLForBundleRoot(BundleRoot, FallbackExtension);
         }
     }
 }
