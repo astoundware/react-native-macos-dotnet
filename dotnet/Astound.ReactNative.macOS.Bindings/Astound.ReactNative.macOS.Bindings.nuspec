@@ -22,15 +22,11 @@
   </metadata>
   <files>
     <file src="..\..\images\astound.png" target="images"/>
-    <file src="..\..\xcode\bin\Debug\AccessibilityResources.bundle\**"
-          target="resources\AccessibilityResources.bundle"/>
+    <file src="..\..\xcode\bin\AccessibilityResources.bundle\**" target="resources\AccessibilityResources.bundle"/>
     <file src="scripts\**" target="scripts"/>
-    <file src="bin\Debug\net8.0-macos\Astound.ReactNative.macOS.Bindings.dll" target="references\Debug"/>
-    <file src="bin\Debug\net8.0-macos\Astound.ReactNative.macOS.Bindings.resources\**"
-          target="references\Debug\Astound.ReactNative.macOS.Bindings.resources"/>
-    <file src="bin\Release\net8.0-macos\Astound.ReactNative.macOS.Bindings.dll" target="references\Release"/>
+    <file src="bin\Release\net8.0-macos\Astound.ReactNative.macOS.Bindings.dll" target="lib\net8.0-macos10.15"/>
     <file src="bin\Release\net8.0-macos\Astound.ReactNative.macOS.Bindings.resources\**"
-          target="references\Release\Astound.ReactNative.macOS.Bindings.resources"/>
+          target="lib\net8.0-macos10.15\Astound.ReactNative.macOS.Bindings.resources"/>
     <file src="Astound.ReactNative.macOS.Bindings.targets" target="build"/>
     <file src="Astound.ReactNative.macOS.Bindings.props" target="build"/>
   </files>
