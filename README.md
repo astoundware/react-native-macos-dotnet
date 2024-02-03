@@ -37,14 +37,14 @@ If an issue does not exist for the improvement you would like to make, please cr
 1. Open the [Astound.ReactNative.macOS solution](dotnet/Astound.ReactNative.macOS.sln) in the dotnet directory.
 
 ### Building and Packaging
-* Use `dotnet` or your IDE to build the solution.
+* Use `dotnet` CLI or your IDE to build the solution.
 * Run `make` or `make pack` in the Astound.ReactNative.macOS.Bindings directory to build and package the bindings library.
 * Run `make` or `make pack` in the Astound.ReactNative.macOS.Extensions directory to build and package the extensions library.
 
 ### Updating Dependencies
 Follow these steps to target a newer version of React Native for macOS.
 1. Identify the latest stable version on [this page](https://microsoft.github.io/react-native-windows/docs/rnm-getting-started).
-1. Run `yarn update react-native@<version> react-native-macos@<version>`
+1. Run `yarn add react-native@<version> react-native-macos@<version>`
 1. Run `pod install` in the xcode directory.
 1. Open [ReactNative-macOS.xcworkspace](xcode/ReactNative-macOS.xcworkspace) in the xcode directory.
 1. Remove all Frameworks except JavaScriptCore from the ReactNative-macOS project.

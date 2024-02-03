@@ -24,7 +24,7 @@ Once that has been completed, you should have folders for each platform along wi
    ```
 
 ### Installing the NuGet Package
-Now that we have a basic Xamarin macOS app, we're going to modify it to call React Native. This is where the `Astound.ReactNative.macOS.Extensions` package comes in. Use the `dotnet` CLI to install it.
+Now that we have a basic macOS app, we're going to modify it to call React Native. This is where the `Astound.ReactNative.macOS.Extensions` package comes in. Use the `dotnet` CLI to install it.
 ```
 dotnet add package Astound.ReactNative.macOS.Extensions -v 0.71
 ```
