@@ -1,19 +1,33 @@
 # Getting Started
 ## Creating an App
-As suggested by its name, the `Astound.ReactNative.macOS.Extensions` package is really just an extension of the great work done by Facebook/Meta and Microsoft. Because of this, the very first step is to use their tools to create a basic app. You can do so by following [Microsoft's instructions](https://microsoft.github.io/react-native-windows/docs/0.64/rnm-getting-started).
+As suggested by its name, the `Astound.ReactNative.macOS.Extensions` package is really just an extension of the great work done by Facebook/Meta and Microsoft. Because of this, the very first step is to use their tools to create a basic app. You can do so by following [Microsoft's instructions](https://microsoft.github.io/react-native-windows/docs/0.71/rnm-getting-started).
 
 ### Creating a Project
 Once that has been completed, you should have folders for each platform along with your app's JavaScript code. Since **React Native for macOS + .NET** enables connectivity with .NET on _macOS_, the next set of steps replace the existing macOS-specific Xcode project with a .NET project.
 1. Empty (or recreate) the macos folder.
     > Note: You may also remove the android and/or ios folders if you are not developing for those platforms.
-1. Use _Visual Studio for Mac_ to create a new Mac Cocoa App in the macos folder.
-    ![Cocoa App Project](../images/cocoa-app-project.png)
-    1. Target macOS Mojave 10.14 or higher.
-        ![Configure Mac App](../images/configure-mac-app.png)
+1. Navigate to the macos folder.
+    ```
+    cd macos
+    ```
+1. Install the macos workload.
+    ```
+    sudo dotnet workload install macos
+    ```
+1. Create a new project.
+   ```
+   dotnet new macos -n <projectName>
+   ```
+1. Navigate to the new project folder.
+   ```
+   cd <projectName>
+   ```
 
 ### Installing the NuGet Package
-Now that we have a basic Xamarin macOS app, we're going to modify it to call React Native. This is where the `Astound.ReactNative.macOS.Extensions` package comes in. Select your project and use _Project>Manage NuGet Packages..._ from the menu bar to install it.
-![Manage NuGet Packages](../images/manage-nuget-packages.png)
+Now that we have a basic Xamarin macOS app, we're going to modify it to call React Native. This is where the `Astound.ReactNative.macOS.Extensions` package comes in. Use the `dotnet` CLI to install it.
+```
+dotnet add package Astound.ReactNative.macOS.Extensions -v 0.71
+```
 
 ### Modifying the AppDelegate
 The `Astound.ReactNative.macOS.Extensions` package provides a pre-configured `AppDelegate` class called `ReactAppDelegate`. This class creates a React bridge and tells it where to access the JavaScript. Open your `AppDelegate.cs` file and perform the following steps to use `ReactAppDelegate`.
@@ -26,7 +40,7 @@ By default, `ReactAppDelegate` expects a JavaScript file called `index.js`. If t
 ```
 protected override string BundleRoot => "entry";
 ```
-`ReactAppDelegate` also registers your C# modules for use in JavaScript. We'll go into the details of creating a C# module later. At some point, you'll need to decide where to place that code. By default, `ReactAppDelegate` finds and registers all modules in the main Cocoa App project. If you decide to place them in a different project, you will want to override the `RegisterModules` method.
+`ReactAppDelegate` also registers your C# modules for use in JavaScript. We'll go into the details of creating a C# module later. At some point, you'll need to decide where to place that code. By default, `ReactAppDelegate` finds and registers all modules in the main Application project. If you decide to place them in a different project, you will want to override the `RegisterModules` method.
 ```
 public override void RegisterModules(Astound.ReactNative.Modules.IReactModuleRegistry registry)
 {
@@ -53,6 +67,9 @@ protected override string JsModuleName => "MyReactNativeApp";
 
 ### Running the App
 Congratulations! At this point, you should have a working React Native app. Build and run it to enjoy the fruits of your labor. If you use the Debug configuration, you should see Metro, the React packager, launch and your app connect to it. By default, Metro will reload your app when you make changes to the JavaScript. If you use the Release configuration instead, a JS bundle file should be created and placed in your macOS app bundle. In the next section, we'll detail the steps required to create a native (C#) module.
+```
+dotnet run -c <Configuration>
+```
 
 ## Creating a Native Module
 You probably wouldn't be here if you didn't want to call some C# code in your React app. This section will walk you through the steps to create a native module that can be called from JavaScript.

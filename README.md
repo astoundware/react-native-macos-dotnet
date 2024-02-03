@@ -3,8 +3,7 @@ A framework for building native macOS apps with React and .NET. Use React Native
 
 ## System Requirements
 * Those identified by [react-native-macos](https://microsoft.github.io/react-native-windows/docs/rnm-dependencies)
-* [.NET 6+ SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-* [Xamarin.Mac](https://docs.microsoft.com/en-us/xamarin/mac/get-started/)
+* [.NET 8+ SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 
 ## Getting Started
 Follow the steps in [this guide](docs/getting-started.md) to create your first app using **React Native for macOS + .NET**.
@@ -14,7 +13,7 @@ Should you run into any problems, please refer to [this guide](docs/troubleshoot
 
 ## Third-Party Components
 In addition to the built-in components provided by React Native, this extension includes some third-party components that you may find useful. Please refer to the documentation provided by each component for instructions on how to use them. Please note that any instructions related to CocoaPods or linking can be skipped.
-* [@react-native-picker/picker](https://github.com/react-native-picker/picker/tree/v2.4.1)
+* [@react-native-picker/picker](https://github.com/react-native-picker/picker/tree/v2.6.1)
 
 ## Contributing
 Most contributions are welcome, but those not meeting the project's goals or standards may be rejected.
@@ -31,7 +30,6 @@ If an issue does not exist for the improvement you would like to make, please cr
 * [Node.js](https://nodejs.org/)
 * [Yarn](https://yarnpkg.com/)
 * [CocoaPods](https://cocoapods.org/)
-* [Xamarin.Mac](https://docs.microsoft.com/en-us/xamarin/mac/)
 
 ### Setting Up
 1. Run `yarn install` in the root of the repository.
@@ -39,10 +37,18 @@ If an issue does not exist for the improvement you would like to make, please cr
 1. Open the [Astound.ReactNative.macOS solution](dotnet/Astound.ReactNative.macOS.sln) in the dotnet directory.
 
 ### Building and Packaging
-* Use MSBuild or Visual Studio to build the solution.
-    * I have not had success building it with `dotnet build`.
+* Use `dotnet` or your IDE to build the solution.
 * Run `make` or `make pack` in the Astound.ReactNative.macOS.Bindings directory to build and package the bindings library.
 * Run `make` or `make pack` in the Astound.ReactNative.macOS.Extensions directory to build and package the extensions library.
+
+### Updating Dependencies
+Follow these steps to target a newer version of React Native for macOS.
+1. Identify the latest stable version on [this page](https://microsoft.github.io/react-native-windows/docs/rnm-getting-started).
+1. Run `yarn update react-native@<version> react-native-macos@<version>`
+1. Run `pod install` in the xcode directory.
+1. Open [ReactNative-macOS.xcworkspace](xcode/ReactNative-macOS.xcworkspace) in the xcode directory.
+1. Remove all Frameworks except JavaScriptCore from the ReactNative-macOS project.
+1. Under _Build Phases > Link Binary With Libraries_, add all targets of the Pods project to the ReactNative-macOS target.
 
 ## License
 This .NET extension, the underlying React Native for macOS extension, including modifications to the original Facebook source code, and all newly contributed code is provided under the [MIT License](LICENSE). The React Native for macOS extension is copyright Microsoft. Portions of the React Native for macOS extension derived from React Native are copyright Facebook.
