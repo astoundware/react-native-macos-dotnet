@@ -9,10 +9,11 @@ namespace Astound.ReactNative.macOS.Extensions
 {
     public class ReactAppDelegate : NSApplicationDelegate, IRCTBridgeDelegate, IReactAppDelegate
     {
-        public RCTBridge Bridge { get; private set; }
+        public RCTBridge Bridge { get; private set; } = null!;
 
         protected virtual string BundleRoot => "index";
-        protected virtual string FallbackResourceName => "main";
+        protected virtual string FallbackExtension => "jsbundle";
+
         protected virtual IReactModuleRegistry ModuleRegistry { get; } =
             new ReactModuleRegistry(ReactFunctionsWrapper.Self);
 
@@ -27,14 +28,14 @@ namespace Astound.ReactNative.macOS.Extensions
 
         public virtual void RegisterModules(IReactModuleRegistry registry)
         {
-            registry.Register(Assembly.GetEntryAssembly());
+            registry.Register(Assembly.GetEntryAssembly()!);
         }
 
         public virtual NSUrl SourceURLForBridge(RCTBridge bridge)
         {
             var settings = RCTBundleURLProvider.SharedSettings();
 
-            return settings.JsBundleURLForBundleRoot(BundleRoot, FallbackResourceName);
+            return settings.JsBundleURLForBundleRoot(BundleRoot, FallbackExtension);
         }
     }
 }

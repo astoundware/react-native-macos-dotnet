@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package >
+<package>
   <metadata minClientVersion="2.5">
     <id>Astound.ReactNative.macOS.Bindings</id>
-    <version>0.64.1</version>
+    <version>0.71.0</version>
     <title>Astound.ReactNative.macOS.Bindings</title>
     <authors>Astound</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -10,22 +10,28 @@
     <projectUrl>https://github.com/astoundware/react-native-macos-dotnet</projectUrl>
     <icon>images\astound.png</icon>
     <description>This bindings library enables you to create a React Native app for macOS.</description>
-    <copyright>Copyright © 2022 Astound</copyright>
+    <copyright>Copyright © 2024 Astound</copyright>
     <tags>React macOS</tags>
     <releaseNotes>
-      - Added picker support via @react-native-picker/picker
+      - Targeted .NET 8
+      - Updated React Native to version 0.71
     </releaseNotes>
     <dependencies>
-      <group targetFramework="Xamarin.Mac2.0" />
+      <group targetFramework="net8.0-macos10.15"/>
     </dependencies>
   </metadata>
   <files>
-      <file src="..\..\images\astound.png" target="images" />
-      <file src="..\..\xcode\bin\Debug\AccessibilityResources.bundle\**" target="resources\AccessibilityResources.bundle" />
-      <file src="scripts\**" target="scripts" />
-      <file src="bin\Debug\Astound.ReactNative.macOS.Bindings.dll" target="references\Debug" />
-      <file src="bin\Release\Astound.ReactNative.macOS.Bindings.dll" target="references\Release" />
-      <file src="Astound.ReactNative.macOS.Bindings.targets" target="build"/>
-      <file src="Astound.ReactNative.macOS.Bindings.props" target="build"/>
+    <file src="..\..\images\astound.png" target="images"/>
+    <file src="..\..\xcode\bin\Debug\AccessibilityResources.bundle\**"
+          target="resources\AccessibilityResources.bundle"/>
+    <file src="scripts\**" target="scripts"/>
+    <file src="bin\Debug\net8.0-macos\Astound.ReactNative.macOS.Bindings.dll" target="references\Debug"/>
+    <file src="bin\Debug\net8.0-macos\Astound.ReactNative.macOS.Bindings.resources\**"
+          target="references\Debug\Astound.ReactNative.macOS.Bindings.resources"/>
+    <file src="bin\Release\net8.0-macos\Astound.ReactNative.macOS.Bindings.dll" target="references\Release"/>
+    <file src="bin\Release\net8.0-macos\Astound.ReactNative.macOS.Bindings.resources\**"
+          target="references\Release\Astound.ReactNative.macOS.Bindings.resources"/>
+    <file src="Astound.ReactNative.macOS.Bindings.targets" target="build"/>
+    <file src="Astound.ReactNative.macOS.Bindings.props" target="build"/>
   </files>
 </package>

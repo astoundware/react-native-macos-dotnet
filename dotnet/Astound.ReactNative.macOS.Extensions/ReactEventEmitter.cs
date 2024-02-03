@@ -5,8 +5,8 @@ using Astound.ReactNative.macOS.Bindings;
 namespace Astound.ReactNative.macOS.Extensions
 {
     public abstract class ReactEventEmitterBase : RCTEventEmitter
-	{
-		public virtual bool HasListeners { get; protected set; }
+    {
+        public virtual bool HasListeners { get; protected set; }
 
         public abstract override string[] SupportedEvents { get; }
 
@@ -20,7 +20,7 @@ namespace Astound.ReactNative.macOS.Extensions
             HasListeners = false;
         }
 
-        public virtual void EmitEvent(string name, object body = null)
+        public virtual void EmitEvent(string name, object? body = null)
         {
             if (name == null)
             {
@@ -30,7 +30,7 @@ namespace Astound.ReactNative.macOS.Extensions
             if (!HasListeners)
             {
                 Trace.WriteLine($"Event '{name}' was not emitted because the emitter has no listeners. " +
-                    "Confirm that addListener was called from JavaScript prior to emitting the event.");
+                                "Confirm that addListener was called from JavaScript prior to emitting the event.");
 
                 return;
             }
@@ -39,4 +39,3 @@ namespace Astound.ReactNative.macOS.Extensions
         }
     }
 }
-
