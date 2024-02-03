@@ -16,4 +16,3 @@ namespace Astound.ReactNative.macOS.Extensions
 		public void RegisterModule(string moduleName) => RCTFunctions.RCTRegisterModule(Class.GetHandle(moduleName));
 	}
 }
-

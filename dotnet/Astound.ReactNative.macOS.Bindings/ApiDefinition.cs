@@ -96,4 +96,3 @@ namespace Astound.ReactNative.macOS.Bindings
         void StopObserving();
     }
 }
-

@@ -7,4 +7,3 @@ namespace Astound.ReactNative.macOS.Extensions
 		RCTBridge Bridge { get; }
 	}
 }
-
