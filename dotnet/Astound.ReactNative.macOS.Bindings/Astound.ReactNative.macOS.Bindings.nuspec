@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/astoundware/react-native-macos-dotnet</projectUrl>
     <icon>images\astound.png</icon>
     <description>This bindings library enables you to create a React Native app for macOS.</description>
-    <copyright>Copyright © 2023 Astound</copyright>
+    <copyright>Copyright © 2024 Astound</copyright>
     <tags>React macOS</tags>
     <releaseNotes>
       - Targeted .NET 8

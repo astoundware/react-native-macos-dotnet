@@ -11,7 +11,7 @@
     <projectUrl>https://github.com/astoundware/react-native-macos-dotnet</projectUrl>
     <icon>images\astound.png</icon>
     <description>This library provides extensions for simplifying the creation of React Native apps on macOS using .NET.</description>
-    <copyright>Copyright © 2022 Astound</copyright>
+    <copyright>Copyright © 2024 Astound</copyright>
     <tags>React macOS</tags>
     <releaseNotes>
       - Targeted .NET 8
