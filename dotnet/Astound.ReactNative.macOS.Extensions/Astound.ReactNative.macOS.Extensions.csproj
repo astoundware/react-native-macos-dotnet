@@ -3,7 +3,7 @@
     <TargetFramework>net8.0-macos</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
-    <AssemblyVersion>0.71.0</AssemblyVersion>
+    <AssemblyVersion>0.71.1</AssemblyVersion>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Astound.ReactNative.macOS.Bindings\Astound.ReactNative.macOS.Bindings.csproj"/>
