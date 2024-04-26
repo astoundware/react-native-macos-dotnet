@@ -13,8 +13,7 @@
     <copyright>Copyright © 2024 Astound</copyright>
     <tags>React macOS</tags>
     <releaseNotes>
-      - Targeted .NET 8
-      - Updated React Native to version 0.71
+      - Prevented bundler from running multiple times during release builds
     </releaseNotes>
     <dependencies>
       <group targetFramework="net8.0-macos10.15"/>

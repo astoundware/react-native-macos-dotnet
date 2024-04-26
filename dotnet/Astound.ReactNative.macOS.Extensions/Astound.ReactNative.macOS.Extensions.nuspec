@@ -14,7 +14,7 @@
     <copyright>Copyright © 2024 Astound</copyright>
     <tags>React macOS</tags>
     <releaseNotes>
-      - Targeted .NET 8
+      - Updated Astound.ReactNative.macOS.Bindings reference to version 0.71.1
     </releaseNotes>
     <dependencies>
       <group targetFramework="net8.0-macos10.15">
