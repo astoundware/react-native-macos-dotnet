@@ -18,7 +18,7 @@
     <Target Condition="'$(IsReactRelease)'!='true' AND '$(OutputType)'=='Exe'" Name="StartPackager" AfterTargets="AfterBuild">
         <Exec Condition="'$(EnableReactPackager)'!='false'" WorkingDirectory="$(ProjectDir)" Command="$(MSBuildThisFileDirectory)..\scripts\packager.sh" />
     </Target>
-    <Target Condition="'$(IsReactRelease)|$(OutputType)'=='true|Exe'" Name="JsBundle" BeforeTargets="_BeforeCoreCompileImageAssets">
+    <Target Condition="'$(IsReactRelease)|$(OutputType)'=='true|Exe'" Name="JsBundle" BeforeTargets="_CreateMergedAppBundle">
         <Exec WorkingDirectory="$(ProjectDir)" Command="$(MSBuildThisFileDirectory)..\scripts\bundle.sh" />
         <ItemGroup>
             <BundleResource Include="Resources\main.jsbundle">

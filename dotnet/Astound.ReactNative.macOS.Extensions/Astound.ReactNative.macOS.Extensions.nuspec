@@ -2,7 +2,7 @@
 <package >
   <metadata minClientVersion="2.5">
     <id>Astound.ReactNative.macOS.Extensions</id>
-    <version>0.71.0</version>
+    <version>0.71.1</version>
     <title>Astound.ReactNative.macOS.Extensions</title>
     <authors>Astound</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -18,7 +18,7 @@
     </releaseNotes>
     <dependencies>
       <group targetFramework="net8.0-macos10.15">
-        <dependency id="Astound.ReactNative.macOS.Bindings" version="0.71.0" />
+        <dependency id="Astound.ReactNative.macOS.Bindings" version="0.71.1" />
         <dependency id="Astound.ReactNative.Modules" version="1.0.0" />
         <dependency id="Astound.ReactNative.Modules.ObjC" version="1.0.0" />
         <dependency id="Astound.ReactNative.Generators.ObjC" version="0.64.0" />
