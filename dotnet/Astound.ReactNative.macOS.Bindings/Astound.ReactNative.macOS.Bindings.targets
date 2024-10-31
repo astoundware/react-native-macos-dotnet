@@ -1,37 +1,36 @@
 ﻿
 <Project>
-    <ItemGroup Condition="'$(IsReactRelease)'=='true'">
+    <ItemGroup Condition="'$(ReactRelease)'=='true'">
         <Reference Include="Astound.ReactNative.macOS.Bindings">
             <HintPath>$(MSBuildThisFileDirectory)..\references\Release\Astound.ReactNative.macOS.Bindings.dll</HintPath>
         </Reference>
     </ItemGroup>
-    <ItemGroup Condition="'$(IsReactRelease)'!='true'">
+    <ItemGroup Condition="'$(ReactRelease)'!='true'">
         <Reference Include="Astound.ReactNative.macOS.Bindings">
             <HintPath>$(MSBuildThisFileDirectory)..\references\Debug\Astound.ReactNative.macOS.Bindings.dll</HintPath>
         </Reference>
     </ItemGroup>
     <ItemGroup Condition="'$(OutputType)'=='Exe'">
         <BundleResource Include="$(MSBuildThisFileDirectory)..\resources\AccessibilityResources.bundle\**\*.*">
-          <Link>Resources\AccessibilityResources.bundle\%(RecursiveDir)%(Filename)%(Extension)</Link>
+            <Link>Resources\AccessibilityResources.bundle\%(RecursiveDir)%(Filename)%(Extension)</Link>
         </BundleResource>
     </ItemGroup>
-    <Target Condition="'$(IsReactRelease)'!='true' AND '$(OutputType)'=='Exe'" Name="StartPackager" AfterTargets="AfterBuild">
-        <Exec Condition="'$(EnableReactPackager)'!='false'" WorkingDirectory="$(ProjectDir)" Command="$(MSBuildThisFileDirectory)..\scripts\packager.sh" />
+    <ItemGroup Condition="'$(ReactRelease)|$(OutputType)'=='true|Exe'">
+        <BundleResource Include="$(_ReactBundlePath)main.jsbundle">
+            <Link>Resources\main.jsbundle</Link>
+        </BundleResource>
+        <BundleResource Include="$(_ReactBundlePath)assets\**\*.*">
+            <Link>Resources\assets\%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </BundleResource>
+    </ItemGroup>
+    <Target Condition="'$(ReactRelease)'!='true' AND '$(OutputType)'=='Exe'" Name="ReactPackager" AfterTargets="AfterBuild">
+        <Exec Condition="'$(ReactPackagerEnabled)'!='false'" WorkingDirectory="$(ProjectDir)" Command="$(MSBuildThisFileDirectory)..\scripts\packager.sh" />
     </Target>
-    <Target Condition="'$(IsReactRelease)|$(OutputType)'=='true|Exe'" Name="JsBundle" BeforeTargets="_CreateMergedAppBundle">
-        <Exec WorkingDirectory="$(ProjectDir)" Command="$(MSBuildThisFileDirectory)..\scripts\bundle.sh" />
-        <ItemGroup>
-            <BundleResource Include="Resources\main.jsbundle">
-                <Link>Resources\main.jsbundle</Link>
-            </BundleResource>
-            <JsAssets Include="Resources\assets\**\*.*" />
-            <BundleResource Include="@(JsAssets)">
-                <Link>Resources\assets\%(JsAssets.RecursiveDir)%(JsAssets.Filename)%(JsAssets.Extension)</Link>
-            </BundleResource>
-        </ItemGroup>
+    <Target Condition="'$(ReactRelease)|$(OutputType)'=='true|Exe'" Name="ReactBundle" BeforeTargets="_CollectBundleResources">
+        <MakeDir Condition="!Exists('$(_ReactBundlePath)')" Directories="$(_ReactBundlePath)" />
+        <Exec WorkingDirectory="$(_ReactBundlePath)" Command="$(MSBuildThisFileDirectory)..\scripts\bundle.sh" />
     </Target>
-    <Target Condition="'$(IsReactRelease)|$(OutputType)'=='true|Exe'" Name="AfterClean">
-        <Delete Condition="Exists('Resources\main.jsbundle')" Files="Resources\main.jsbundle" />
-        <RemoveDir Condition="Exists('Resources\assets')" Directories="Resources\assets" />
+    <Target Condition="'$(ReactRelease)|$(OutputType)'=='true|Exe'" Name="AfterClean">
+        <RemoveDir Condition="Exists('$(_ReactBundlePath)')" Directories="$(_ReactBundlePath)" />
     </Target>
 </Project>
