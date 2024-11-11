@@ -2,7 +2,7 @@
 <package>
   <metadata minClientVersion="2.5">
     <id>Astound.ReactNative.macOS.Bindings</id>
-    <version>0.71.1</version>
+    <version>0.71.2</version>
     <title>Astound.ReactNative.macOS.Bindings</title>
     <authors>Astound</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -13,7 +13,7 @@
     <copyright>Copyright © 2024 Astound</copyright>
     <tags>React macOS</tags>
     <releaseNotes>
-      - Prevented bundler from running multiple times during release builds
+      - Fixed timing issues with the React bundler during release builds
     </releaseNotes>
     <dependencies>
       <group targetFramework="net8.0-macos10.15"/>
