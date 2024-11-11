@@ -1,6 +1,13 @@
 ﻿
 <Project>
+    <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+        <ReactPackagerEnabled>true</ReactPackagerEnabled>
+        <ReactRelease>false</ReactRelease>
+    </PropertyGroup>
     <PropertyGroup Condition="'$(Configuration)'=='Release'">
-        <IsReactRelease>true</IsReactRelease>
+        <ReactPackagerEnabled>false</ReactPackagerEnabled>
+        <ReactRelease>true</ReactRelease>
+        <ReactBundleDir>bin\$(Configuration)\bundle</ReactBundleDir>
+        <_ReactBundlePath>$(ProjectPath)$(ReactBundleDir)\</_ReactBundlePath>
     </PropertyGroup>
 </Project>
