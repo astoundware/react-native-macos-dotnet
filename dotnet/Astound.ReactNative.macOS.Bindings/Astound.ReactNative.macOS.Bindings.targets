@@ -30,6 +30,9 @@
         <MakeDir Condition="!Exists('$(_ReactBundlePath)')" Directories="$(_ReactBundlePath)" />
         <Exec WorkingDirectory="$(_ReactBundlePath)" Command="$(MSBuildThisFileDirectory)..\scripts\bundle.sh" />
     </Target>
+    <Target Condition="'$(ReactRelease)|$(OutputType)'=='true|Exe'" Name="ReactBundleUnlock" BeforeTargets="_CreateMergedAppBundle">
+        <Delete Condition="Exists('$(_ReactBundlePath).lock')" Files="$(_ReactBundlePath).lock" />
+    </Target>
     <Target Condition="'$(ReactRelease)|$(OutputType)'=='true|Exe'" Name="AfterClean">
         <RemoveDir Condition="Exists('$(_ReactBundlePath)')" Directories="$(_ReactBundlePath)" />
     </Target>
